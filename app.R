@@ -8,8 +8,8 @@ library(sodium)
 loginpage <- div(id = "loginpage", style = "width: 500px; max-width: 100%; margin: 0 auto; padding: 20px;",
                  wellPanel(
                    tags$h2("ENTRADA", class = "text-center", style = "padding-top: 0;color:#333; font-weight:600;"),
-                   textInput("userName", placeholder="Username", label = tagList(icon("user"), "Username")),
-                   passwordInput("passwd", placeholder="Password", label = tagList(icon("unlock-alt"), "Password")),
+                   textInput("userName", placeholder="Utilizador...", label = tagList(icon("user"), "Utilizador")),
+                   passwordInput("passwd", placeholder="Senha de acesso...", label = tagList(icon("unlock-alt"), "Senha de acesso")),
                    br(),
                    div(
                      style = "text-align: center;",
@@ -18,15 +18,28 @@ loginpage <- div(id = "loginpage", style = "width: 500px; max-width: 100%; margi
                                  font-size: 18px; font-weight: 600;"),
                      shinyjs::hidden(
                        div(id = "nomatch",
-                           tags$p("Oops! Incorrect username or password!",
+                           tags$p("Oops! Utilizador ou Senha de acesso invalidos!",
                                   style = "color: red; font-weight: 600; 
                                             padding-top: 5px;font-size:16px;", 
                                   class = "text-center"))),
                      br(),
                      br(),
-                     tags$code("Nome de Utilizador: utilizador1  Senha de acesso: senha1"),
+                     tags$code("Utilizador: utilizador1 | Senha de acesso: senha1"),
                      br(),
-                     tags$code("SNome de Utilizador: utilizador2  Senha de acesso: senha2")
+                     tags$code("Utilizador: utilizador2 | Senha de acesso: senha2"),
+                     
+                     br(),
+                     br(),
+                     #tags$code("Credits to https://www.listendata.com/2019/06/how-to-add-login-page-in-shiny-r.html"),
+                     #tags$code(a(icon("fa fa-sign-out"), "Sair", href="javascript:window.location.reload(true)"),
+                     
+                     tags$code(a(icon("fa fa-globe"), "Credits", 
+                               href="https://www.listendata.com/2019/06/how-to-add-login-page-in-shiny-r.html"),
+                               target="_blank",
+                             class = "dropdown", 
+                             style = "background-color: #eee !important; border: 0;
+                              font-weight: bold; margin:5px; padding: 10px;")
+                     
                    ))
 )
 
@@ -74,7 +87,7 @@ server <- function(input, output, session) {
   
   output$logoutbtn <- renderUI({
     req(USER$login)
-    tags$li(a(icon("fa fa-sign-out"), "Logout", 
+    tags$li(a(icon("fa fa-sign-out"), "Sair", 
               href="javascript:window.location.reload(true)"),
             class = "dropdown", 
             style = "background-color: #eee !important; border: 0;
@@ -84,8 +97,8 @@ server <- function(input, output, session) {
   output$sidebarpanel <- renderUI({
     if (USER$login == TRUE ){ 
       sidebarMenu(
-        menuItem("Main Page", tabName = "dashboard", icon = icon("dashboard")),
-        menuItem("Second Page", tabName = "second", icon = icon("th"))
+        menuItem("Menú 1", tabName = "dashboard", icon = icon("dashboard")),
+        menuItem("Menú 2", tabName = "second", icon = icon("th"))
       )
     }
   })
