@@ -14,4 +14,4 @@ Install the current packages:
  
  
 ## Open or Create the file app.R
-Place the all code on that
+Place all code on the file
