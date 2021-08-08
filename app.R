@@ -97,8 +97,8 @@ server <- function(input, output, session) {
   output$sidebarpanel <- renderUI({
     if (USER$login == TRUE ){ 
       sidebarMenu(
-        menuItem("Menú 1", tabName = "dashboard", icon = icon("dashboard")),
-        menuItem("Menú 2", tabName = "second", icon = icon("th"))
+        menuItem("Menu 1", tabName = "dashboard", icon = icon("dashboard")),
+        menuItem("Menu 2", tabName = "second", icon = icon("th"))
       )
     }
   })
