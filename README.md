@@ -13,4 +13,5 @@ Install the current packages:
  > sodium
  
  
-## Open or Create the file app.R 
+## Open or Create the file app.R
+Place the all code on that
