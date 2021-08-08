@@ -1,8 +1,7 @@
 # Shinydashboard-with-login-page
 R Shinydashboard with login page
 
-![alt text](https://raw.githubusercontent.com/jmrafael/Shinydashboard-with-login-page/master/image.JPG
-
+![alt text](https://raw.githubusercontent.com/jmrafael/Shinydashboard-with-login-page/master/image.JPG?raw=true)
 
 ## Requirements
 Install R and RStudio
