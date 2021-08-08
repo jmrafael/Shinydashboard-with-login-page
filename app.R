@@ -4,6 +4,7 @@ library(DT)
 library(shinyjs)
 library(sodium)
 
+
 # Main login screen
 loginpage <- div(id = "loginpage", style = "width: 500px; max-width: 100%; margin: 0 auto; padding: 20px;",
                  wellPanel(

@@ -1,0 +1,11 @@
+name: shinydashboard_with_login_page
+title:
+username:
+account: mozapp
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4468918
+bundleId: 4901273
+url: https://mozapp.shinyapps.io/shinydashboard_with_login_page/
+when: 1628443780.37769
+lastSyncTime: 1628443780.37769
